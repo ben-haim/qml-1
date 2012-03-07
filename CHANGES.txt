@@ -1,0 +1,36 @@
+Version 0.2.1 on 2010-02-17:
+  * Added 'root'/'rootx', 'solve'/'solvex', 'line'/'linex', 'min'/'minx' and
+   'conmin'/'conminx' nonlinear optimization functions.
+
+Version 0.1.8 on 2009-10-25:
+  * Old 'mdiag' function renamed to 'diag', which creates a diagonal matrix.
+    New 'mdiag' function added to extract the main diagonal from a matrix.
+    The intended convention is that "m" functions operate on matrixes.
+  * Added 'mqrp' and 'mrank' matrix functions.
+  * Added 'bncdf', 'bnicdf', 'pscdf', 'psicdf', 'smcdf', 'smicdf', 'kcdf' and
+   'kicdf' probability functions.
+
+Version 0.1.7 on 2009-10-13:
+  * Support building with GCC 3 on Linux.
+  * Support building on 64-bit OpenSolaris (x86).
+
+Version 0.1.6 on 2009-10-12:
+  * Fixed integer argument size in LAPACK calls on 64-bit Linux, OpenSolaris
+    and Darwin.
+  * Added 'mqr' and 'mlup' functions.
+
+Version 0.1.5 on 2009-10-06:
+  * Preliminary support for OpenSolaris.
+
+Version 0.1.4 on 2009-10-05:
+  * Fixed thread safety, which is required for 'peach'.
+
+Version 0.1.3 on 2009-10-01:
+  * When calling LAPACK, query and allocate optimal workspace.
+  * Support Darwin.
+
+Version 0.1.2 on 2009-09-25:
+  * Support GCC on Windows.
+
+Version 0.1.1 on 2009-09-10:
+    First release.
