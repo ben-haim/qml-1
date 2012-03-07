@@ -236,6 +236,23 @@ Q_LIB=$(Q_DIR)/$(PLATFORM)/q.lib
 .PHONY: all test cleanpart clean distclean dist install
 all: $(PLATFORM)/qml.$(DLLEXT)
 
+l64-build:
+	# Here are the steps I took to build qml-0.2.1 on 64-bit CentOS.
+	# Unfortunately, you won't just be able to call `make l64-build`
+	# because of the errors along the way. Just manually execute the
+	# commands in order, and it should work. TODO: Figure out the way
+	# to build in a single command.
+	make
+	make download/f2c.h
+	make
+	make include/f2c.h
+	make clapack/.extracted
+	make cephes/.extracted
+	make
+	cp clapack/INCLUDE/f2c.h clapack/INSTALL/f2c.h
+	cp clapack/INCLUDE/blaswrap.h clapack/INSTALL/blaswrap.h
+	cd clapack && make lapack_install
+	make
 
 # Download targets
 download/fdlibm-src.zip:
